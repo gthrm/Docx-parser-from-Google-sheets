@@ -14,7 +14,7 @@ var f07 = fs.readFileSync( path.resolve(__dirname,'doc/word/fontTable.xml') );
 var f08 = fs.readFileSync( path.resolve(__dirname,'doc/word/numbering.xml') );
 var f09 = fs.readFileSync( path.resolve(__dirname,'doc/word/settings.xml') );
 var f10 = fs.readFileSync( path.resolve(__dirname,'doc/word/styles.xml') );
-var f11 = fs.readFileSync( path.resolve(__dirname,'doc/word/stylesWithEffects.xml') );
+// var f11 = fs.readFileSync( path.resolve(__dirname,'doc/word/stylesWithEffects.xml') );
 var f12 = fs.readFileSync( path.resolve(__dirname,'doc/word/webSettings.xml') );
 var f13 = fs.readFileSync( path.resolve(__dirname,'doc/[Content_Types].xml') );
 /* тут все остальные файлы */
@@ -30,7 +30,7 @@ zip.file('word/fontTable.xml', f07);
 zip.file('word/numbering.xml', f08);
 zip.file('word/settings.xml', f09);
 zip.file('word/styles.xml', f10);
-zip.file('word/stylesWithEffects.xml', f11);
+// zip.file('word/stylesWithEffects.xml', f11);
 zip.file('word/webSettings.xml', f12);
 zip.file('[Content_Types].xml', f13);
 
