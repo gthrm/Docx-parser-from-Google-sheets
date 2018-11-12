@@ -36,9 +36,11 @@ zip.file('[Content_Types].xml', f13);
 
 axios.get("https://spreadsheets.google.com/feeds/list/1Yu4qXyEXOU82OZj6WeE8kju204g1PSRGlto4cw5JEz4/od6/public/values?alt=json").then(({data})=>write_record(data['feed']['entry']));
 
+//запрос отправить на указанный адрес, где заменить "1Yu4qXyEXOU82OZj6WeE8kju204g1PSRGlto4cw5JEz4"
 function write_record(data_lol) {    
     for(i=0; i<data_lol.length; i++){
         var body = String(f06).replace("ИМЯ_ЭКСПЕРТА", ""+data_lol[i]['gsx$name']['$t']);
+        //к наименованием в клетках добавить "gsx$" -> name = gsx$name
 
         zip.file('word/document.xml', body); //, {mode: 0777}
         var data = zip.generate({base64:false,compression:'DEFLATE'});
